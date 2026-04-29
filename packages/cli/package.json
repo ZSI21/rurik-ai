@@ -1,0 +1,17 @@
+{
+  "name": "@rurik/cli",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "rurik": "./src/index.ts"
+  },
+  "dependencies": {
+    "@rurik/core": "workspace:*",
+    "@rurik/gateway": "workspace:*"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@rurik/gateway",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "bin": {
+    "rurik-gateway": "./src/start.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@rurik/core": "workspace:*",
+    "@rurik/agent": "workspace:*",
+    "@rurik/storage": "workspace:*",
+    "@rurik/channel-base": "workspace:*",
+    "@rurik/channel-telegram": "workspace:*",
+    "express": "^4.21.0",
+    "ws": "^8.18.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/ws": "^8.5.0",
+    "@types/cors": "^2.8.0"
+  },
+  "scripts": {
+    "dev": "tsx src/start.ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  }
+}
